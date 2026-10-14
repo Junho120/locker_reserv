@@ -7,7 +7,7 @@ DROP TABLE RENTALS;
 
 DROP TRIGGER TRI_ACCID_NO;
 
--- ACCOUNTS 만들기
+-- ACCOUNTS 만들기(Creating table ACCOUNTS)
 CREATE SEQUENCE ACCID_NO
   START WITH 1          
   INCREMENT BY 1        
@@ -47,7 +47,7 @@ END;
 
 -- 테스트 쿼리 Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CREATED_AT) values (61,'thomas','11235','USER','thomas@cat.co','010-2953-7946','Y',to_timestamp('25/09/09 23:32:09.135370000','RR/MM/DD HH24:MI:SSXFF'));
 
--- LOCKERS 테이블 만들기
+-- LOCKERS 테이블 만들기(Creating table LOCKERS)
 
 CREATE SEQUENCE LOCK_NO
  START WITH 1
@@ -70,7 +70,7 @@ CREATE TABLE "LOCKERS"
    ) ;
 
 
--- 트리거 제작
+-- 트리거 제작(Create Trigger)
 
 CREATE OR REPLACE TRIGGER TRI_LOCK_NO
 BEFORE INSERT ON LOCKERS
@@ -83,12 +83,12 @@ END IF;
 END;
 /
 
--- 1. PK 인덱스 (테이블에 PK 제약조건이 없다면 함께 활용 가능)
+-- 1. PK 인덱스 (테이블에 PK 제약조건이 없다면 함께 활용 가능)(PK INDEXING)
 CREATE UNIQUE INDEX PK_LOCKERS ON LOCKERS ("ID") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA";
 
--- 2. 위치 좌표 중복 방지용 복합 유니크 인덱스
+-- 2. 위치 좌표 중복 방지용 복합 유니크 인덱스(This is for locker's location)
 CREATE UNIQUE INDEX UX_LOCKERS_LOC_X_Y ON LOCKERS ("LOCATION", "X", "Y") 
   PCTFREE 10 INITRANS 20 MAXTRANS 255 
   TABLESPACE "DATA";
@@ -114,7 +114,7 @@ CREATE UNIQUE INDEX UX_LOCKERS_LOC_X_Y ON LOCKERS ("LOCATION", "X", "Y")
 REM INSERTING into ACCOUNTS
 SET DEFINE OFF;
 
--- NOTICE 테이블 만들기
+-- NOTICE 테이블 만들기(Creating Notice table)
 CREATE SEQUENCE NTCS_NO
  START WITH 1
  INCREMENT BY 1
@@ -166,7 +166,7 @@ ALTER TABLE "NOTICES" ADD CONSTRAINT "FK_NOTICES_AUTHOR" FOREIGN KEY ("AUTHOR_ID
       
 
 
--- RENTAL 테이블 만들기
+-- RENTAL 테이블 만들기(Creating table RENTAL)
 
 CREATE SEQUENCE RENT_NO
   START WITH 1          

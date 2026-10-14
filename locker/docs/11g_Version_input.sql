@@ -1,5 +1,5 @@
 
--- ¿Ø¿˙ ¿‘∑¬
+-- ¿Ø¿˙ ¿‘∑¬(Inserting users)
 Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CREATED_AT) values (61,'thomas','11235','USER','thomas@cat.co','010-2953-7946','Y',to_timestamp('25/09/09 23:32:09.135370000','RR/MM/DD HH24:MI:SSXFF'));
 Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CREATED_AT) values (22,'test02','1234','USER','test@a.a','1234','Y',to_timestamp('25/09/04 14:37:12.390102000','RR/MM/DD HH24:MI:SSXFF'));
 Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CREATED_AT) values (41,'controll','1357','USER','con@con.com','010-3425-3864','Y',to_timestamp('25/09/07 22:24:34.326633000','RR/MM/DD HH24:MI:SSXFF'));
@@ -21,7 +21,7 @@ Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CRE
 Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CREATED_AT) values (21,'test01','1234','USER','test@a.a','test','Y',to_timestamp('25/09/04 13:07:28.585186000','RR/MM/DD HH24:MI:SSXFF'));
 Insert into ACCOUNTS (ID,USERNAME,PASSWORD,ROLE,EMAIL,PHONE_NUMBER,IS_ACTIVE,CREATED_AT) values (23,'test03','1234','USER','test@a.a','1234','Y',to_timestamp('25/09/04 15:38:55.630310000','RR/MM/DD HH24:MI:SSXFF'));
 
--- Lockers ¿‘∑¬
+-- Lockers ¿‘∑¬(Input Locker information)
 REM INSERTING into LOCKERS
 SET DEFINE OFF;
 Insert into LOCKERS (ID,LOCATION,X,Y,CAPACITY,PRICE,STATUS,CREATED_AT,LOCKER_CODE) values (113,'‡§À«ÛŒœ¢?',1,3,1,400,2,to_timestamp('25/08/16 20:40:37.074860000','RR/MM/DD HH24:MI:SSXFF'),6103);
@@ -275,7 +275,7 @@ Insert into LOCKERS (ID,LOCATION,X,Y,CAPACITY,PRICE,STATUS,CREATED_AT,LOCKER_COD
 Insert into LOCKERS (ID,LOCATION,X,Y,CAPACITY,PRICE,STATUS,CREATED_AT,LOCKER_CODE) values (110,'‡§À«ÛŒœ¢œÁ?—¶ÓÒ',9,3,2,600,2,to_timestamp('25/08/16 20:40:37.074860000','RR/MM/DD HH24:MI:SSXFF'),6021);
 Insert into LOCKERS (ID,LOCATION,X,Y,CAPACITY,PRICE,STATUS,CREATED_AT,LOCKER_CODE) values (111,'‡§À«ÛŒœ¢?',1,1,1,400,2,to_timestamp('25/08/16 20:40:37.074860000','RR/MM/DD HH24:MI:SSXFF'),6101);
 
--- rental ªÛ≈¬ ¿‘∑¬
+-- rental ªÛ≈¬ ¿‘∑¬(Input rental status)
 
 REM INSERTING into RENTALS
 SET DEFINE OFF;
@@ -462,7 +462,7 @@ Insert into RENTALS (ID,USER_ID,LOCKER_CODE,START_TIME,END_TIME,STATUS,CREATED_A
 
 
 
--- Locker¿« ªÛ≈¬ ¿‘∑¬
+-- Locker¿« ªÛ≈¬ ¿‘∑¬(Input Locker's status)
 
 REM INSERTING into STG_LOCKERS
 SET DEFINE OFF;
@@ -717,7 +717,7 @@ Insert into STG_LOCKERS (LOCATION,X,Y,CAPACITY) values ('‘‘œ¢À«ÛŒœ¢ıÛœ¢‹ı–Œ',4,3
 Insert into STG_LOCKERS (LOCATION,X,Y,CAPACITY) values ('‘‘œ¢À«ÛŒœ¢ıÛœ¢‹ı–Œ',5,1,1);
 Insert into STG_LOCKERS (LOCATION,X,Y,CAPACITY) values ('‘‘œ¢À«ÛŒœ¢ıÛœ¢‹ı–Œ',5,2,4);
 
--- Notice ¿‘∑¬
+-- Notice ¿‘∑¬(Input Notice data)
 
 REM INSERTING into NOTICES
 SET DEFINE OFF;
